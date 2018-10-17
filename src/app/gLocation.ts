@@ -3,13 +3,15 @@ export class gLocation {
     private _ggrPos: string;
     lat: number;
     lng: number;
+    show: boolean;
     /**
     * A string taken from the boat information on the ggr website.
     * this is of the form "40° 32.34 S, 115° 17.44 E"
     **/
-    constructor(ggrTrackerPos: string){
-        this.setGGRPos(ggrTrackerPos);
+    constructor(){
+      this.show = false;
     }
+
 
     get ggrPos(){
 	return this._ggrPos;
@@ -18,6 +20,7 @@ export class gLocation {
     set ggrPos(ggrPos: string){
         this._ggrPos = ggrPos;
         this.setGGRPos(ggrPos);
+        this.show = true;
     }
 
     getLatFromGGRLat(latStr: string){

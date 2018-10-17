@@ -14,7 +14,7 @@
           <input class="form-control" [(ngModel)]="loc.ggrPos" placeholder="location">
         </div>
         <div class="mt-4">
-          <div class="alert alert-primary">
+          <div class="alert alert-primary" [hidden]="!loc.show">
             <a target="_blank" href={{loc.getWindyLatLong()}}>{{loc.getWindyLatLong()}}</a>
           </div>
         </div>
