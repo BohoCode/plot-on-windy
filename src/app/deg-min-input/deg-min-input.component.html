@@ -1,18 +1,57 @@
+<div id="deg-min" class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">View on Windy.com</h1>
+    <p class="lead">
+      Paste a boat location from the
+      <a target="_blank" href="https://goldengloberace.com/livetracker/">Golden Globe Race Live Tracker</a> into the
+      box.
+    </p>
+    <hr class="my-4">
+    <p>We'll build you a link to view that boat's position on windy.com</p>
+    <div class="lead">
 
-<div>
-  <label>Location:  
-    <input [(ngModel)]="loc.ggrPos" placeholder="location">
-  </label>
-  <p>Your link:</p>
-  <div class="linkbox">
-     <a target="_blank" href={{loc.getWindyLatLong()}}>{{loc.getWindyLatLong()}}</a>
+        <div>
+          <input class="form-control" [(ngModel)]="loc.ggrPos" placeholder="location">
+        </div>
+        <div class="mt-4">
+          <div class="alert alert-primary">
+            <a target="_blank" href={{loc.getWindyLatLong()}}>{{loc.getWindyLatLong()}}</a>
+          </div>
+        </div>
+
+    </div>
   </div>
-  <h2> What's this?</h2>
-  <p>We all love the Golden Globe Race tracker, but sometimes you want to explore a boat's situation with the full functionality of windy.com. This page allows you to quickly open windy.com at the position of a boat taken from the Golden Globe Tracker."</p>
-  <p>For example in the picture below, the bottom bar shows swell detail that simply isn't available on the Golden Globe Race tracker.</p>
-  <img src="./assets/SusieStorm.png" alt="windy.com screenshot" />
-  <p>You can find the Lat/Long of a boat from the 'team dropdown' on the <a target="_blank" href="https://goldengloberace.com/livetracker/">Golden Globe Race Live Tracker</a>.</p>
-  <img src="./assets/SusieTeamDropdown.png" alt="windy.com sreenshot" />
-  <p>Paste the Lat/Long string from the boat e.g. "40° 30.78 S, 115° 11.07 E" into the Location box at the top of the page and a url will be created for you. It will open windy.com at the boat position you entered.</p>
-  
-</div>
+
+  <!--<div class="row">-->
+    <!--<div class="col-sm">-->
+      <h2> What's all this?</h2>
+      <div class="media jumbotron">
+        <img class="mr-3" src="./assets/SusieStorm.png" alt="windy.com screenshot" />
+        <div class="media-body">
+          <p>
+            We all love the Golden Globe Race tracker, but sometimes you want to explore a boat's situation with the
+            full functionality of windy.com. This page allows you to quickly open windy.com at the position of a boat
+            taken from the Golden Globe Tracker."
+          </p>
+          <p>
+            For example in the picture on the left the bottom bar shows swell detail that simply isn't available on the
+            Golden Globe Race tracker.
+          </p>
+        </div>
+      </div>
+      <div class="media jumbotron">
+        <img class="mr-3" src="./assets/SusieTeamDropdown.png" alt="windy.com sreenshot" />
+        <div class="media-body">
+          <p>You can find the Lat/Long of a boat from the 'team dropdown' on the
+            <a target="_blank" href="https://goldengloberace.com/livetracker/">Golden Globe Race Live Tracker</a>.
+          </p>
+          <p>
+            Paste the Lat/Long string from the boat e.g. "40° 30.78 S, 115° 11.07 E" into the Location box at the
+            top of the page and a url will be created for you. It will open windy.com at the boat position you
+            entered.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
+<!--</div>-->
