@@ -36,7 +36,7 @@ export class gLocation {
      getLongFromGGRLng(latStr: string){
         var dir = latStr.substr(-1, 1);
         var positive = true;
-        if(dir == "S"){
+        if(dir == "W"){
             positive = false;
         }
         var degrees = this.getDegrees(latStr, positive);
